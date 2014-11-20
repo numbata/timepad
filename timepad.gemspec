@@ -15,4 +15,10 @@ Gem::Specification.new do |gem|
   gem.name          = "timepad"
   gem.require_paths = ["lib"]
   gem.version       = Timepad::VERSION
+
+  gem.add_development_dependency 'rake'
+  gem.add_development_dependency 'webmock', '>= 1.20.4'
+  gem.add_development_dependency 'json', '>= 1.8.1'
+  gem.add_development_dependency 'minitest', '>= 5.4.3'
+
 end

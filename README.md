@@ -1,6 +1,6 @@
 # Timepad
 
-[![Build Status](https://secure.travis-ci.org/kaize/timepad.png)](http://travis-ci.org/kaize/timepad)
+[![Build Status](https://secure.travis-ci.org/numbata/timepad.png)](http://travis-ci.org/numbata/timepad)
 
 [https://github.com/timepad/timepad_api/wiki]
 
