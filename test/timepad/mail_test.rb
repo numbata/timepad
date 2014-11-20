@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Timepad::MailTest < MiniTest::Unit::TestCase
+class Timepad::MailTest < MiniTest::Test
 
   def setup
     Timepad.configure do |config|

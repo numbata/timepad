@@ -1,4 +1,4 @@
-require 'minitest/unit'
 require 'minitest/autorun'
+require 'minitest/unit'
 require 'webmock/minitest'
 require 'timepad'
