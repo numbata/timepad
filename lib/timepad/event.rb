@@ -1,6 +1,5 @@
 module Timepad
   class Event < Base
-
     def initialize(timepad_client)
       @client = timepad_client
     end
@@ -26,7 +25,7 @@ module Timepad
     # @params [String] event_id
     # @return [Array]
     def export(event_id, attrs = nil)
-      request_attrs = {:e_id => event_id}
+      request_attrs = { :e_id => event_id }
       request_attrs.merge!(attrs) unless attrs.nil?
       request 'export', request_attrs
     end
@@ -46,6 +45,5 @@ module Timepad
     def register(attrs)
       request 'register', attrs
     end
-
   end
 end

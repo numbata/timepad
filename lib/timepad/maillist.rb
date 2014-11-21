@@ -1,6 +1,5 @@
 module Timepad
   class Maillist < Base
-
     def initialize(timepad_client)
       @client = timepad_client
     end
@@ -16,7 +15,7 @@ module Timepad
     #
     # @param maillist_id [String] maillist id
     # @return [Array]
-    def get maillist_id
+    def get(maillist_id)
       request 'get', :maillist => maillist_id
     end
 
@@ -24,10 +23,8 @@ module Timepad
     #
     # @param maillist_id [String] maillist id
     # @param subscribers [Array]
-    def add_items maillist_id, subscribers
-      if subscribers.kind_of? Hash
-        subscribers = [subscribers]
-      end
+    def add_items(maillist_id, subscribers)
+      subscribers = [subscribers] if subscribers.is_a? Hash
 
       params = subscribers_to_hash(subscribers)
       params[:m_id] = maillist_id
@@ -39,7 +36,7 @@ module Timepad
     #
     # @param title [String] maillist title
     # @param subscribers [Array] maillist initial subscribers
-    def create title, subscribers
+    def create(title, subscribers)
       params = subscribers_to_hash(subscribers)
       params[:name] = title
 

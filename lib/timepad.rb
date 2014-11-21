@@ -30,16 +30,13 @@ module Timepad
     id.nil? ? event : event.get(id)
   end
 
-  def self.events(attrs ={})
+  def self.events(attrs = {})
     event = client.event
     event.get_list attrs
   end
 
   def self.client(attrs = {})
-    if !@client
-      @client = Timepad::Client.new(attrs)
-    end
+    @client ||= Timepad::Client.new(attrs)
     @client
   end
-
 end

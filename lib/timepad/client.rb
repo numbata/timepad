@@ -1,5 +1,6 @@
 module Timepad
   class Client
+    attr_reader :key, :id
 
     # Initalize new API
     #
@@ -8,7 +9,7 @@ module Timepad
     def initialize(attrs = {})
       attrs = Timepad.options.merge(attrs)
       Config::VALID_OPTIONS_KEYS.each do |key|
-         instance_variable_set("@#{key}".to_sym, attrs[key])
+        instance_variable_set("@#{key}".to_sym, attrs[key])
       end
     end
 
@@ -39,13 +40,5 @@ module Timepad
     def event
       @event ||= Timepad::Event.new(self)
     end
-
-    def key
-      @key
-    end
-
-    def id
-      @id
-    end
- end
+  end
 end

@@ -1,6 +1,5 @@
 module Timepad
   module Config
-
     DEFAULT_ENDPOINT = 'http://timepad.ru/api/'
 
     DEFAULT_ID = nil
@@ -13,7 +12,7 @@ module Timepad
       :endpoint
     ]
 
-    attr_accessor *VALID_OPTIONS_KEYS
+    attr_accessor(*VALID_OPTIONS_KEYS)
 
     def self.extended(base)
       base.reset
@@ -29,7 +28,7 @@ module Timepad
     # @return [Hash]
     def options
       options = {}
-      VALID_OPTIONS_KEYS.each{|k| options[k] = send(k)}
+      VALID_OPTIONS_KEYS.each { |k| options[k] = send(k) }
       options
     end
 
