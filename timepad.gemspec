@@ -7,7 +7,6 @@ Gem::Specification.new do |gem|
   gem.description   = %q{Gem that provide access to timepad.ru api}
   gem.summary       = %q{See description}
   gem.homepage      = "https://github.com/kaize/timepad/"
-  gem.add_dependency('activesupport')
 
   gem.files         = `git ls-files`.split("\n")
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
@@ -15,6 +14,8 @@ Gem::Specification.new do |gem|
   gem.name          = "timepad"
   gem.require_paths = ["lib"]
   gem.version       = Timepad::VERSION
+
+  gem.add_dependency 'activesupport', '~> 3'
 
   gem.add_development_dependency 'rake'
   gem.add_development_dependency 'webmock', '>= 1.20.4'
